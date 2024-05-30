@@ -7,6 +7,8 @@ To accomplish this, this model uses the [UCF-Crime dataset](https://www.crcv.ucf
 
 This model uses Object Detection using [YOLOv3](https://pjreddie.com/media/files/papers/YOLOv3.pdf) and Object Tracking using [DeepSORT](https://arxiv.org/abs/1703.07402) to generate inputs describing the movements of objects in the scene, on which the LSTM model was trained.
 
+<img width="466" alt="DeepSORT Example Screenshot" src="https://github.com/droy824/anomaly_detection/assets/90248176/6cf8b999-14dd-4123-82dd-5feca06d379d">
+
 # Results
 The trained LSTM model ([pre-trained weights](https://github.com/droy824/anomaly_detection/blob/main/model_5.pth)) produced an AUC of 62.5%. In comparison, W. Sultani et al.'s [proposed SoTA model](https://openaccess.thecvf.com/content_cvpr_2018/papers/Sultani_Real-World_Anomaly_Detection_CVPR_2018_paper.pdf) produces an AUC of 75.41%.
 
