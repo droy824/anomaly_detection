@@ -1,3 +1,16 @@
+# Introduction
+Anomalous human behaviour consists of any actions that deviate from the norm. This can include dangerous, aggressive or illegal behaviour. The aim for this project was to build a deep learning model that could identify when an anomaly is present in a given video input. The model focuses on identifying ten types of human behaviours: verbal arguments, road accidents, robbery, fighting, shootings, theft, vandalism, riots, stampedes, and normal behaviour. The model should be able to identify such behaviours in indoor or outdoor environments, and in day or night-time scenarios.
+
+To accomplish this, I used the [UCF-Crime dataset](https://www.crcv.ucf.edu/projects/real-world/). I used 271 out of the dataset's 1,900 videos, (as I needed frame-by-frame annotations for all training data).
+
+I used Object Detection using [YOLOv3](https://pjreddie.com/media/files/papers/YOLOv3.pdf) and Object Tracking using [DeepSORT](https://arxiv.org/abs/1703.07402) to generate inputs describing the movements of objects in the scene, on which I trained an LSTM model.
+
+# Results
+The trained LSTM model ([pre-trained weights](https://github.com/droy824/anomaly_detection/blob/main/model_5.pth)) produced an AUC of 62.5%. In comparison, W. Sultani et al.'s [proposed SoTA model](https://openaccess.thecvf.com/content_cvpr_2018/papers/Sultani_Real-World_Anomaly_Detection_CVPR_2018_paper.pdf) produces an AUC of 75.41%.
+
+![ROC Curve](https://github.com/droy824/anomaly_detection/assets/90248176/ce27ec81-03c5-4c3c-9f8a-fd8f1588396f)
+
+
 # Dependencies
 This code runs on:
 * Python 3
@@ -6,6 +19,7 @@ This code runs on:
 * sklearn
 * TensorFlow (>=1.0)
 * PyTorch
+
 * MatPlotLib
 
 # Running the code
@@ -41,7 +55,7 @@ The following directories and files are present in `anomaly_detection`:
 
 15. `Test_dataset_2.zip`: Contains testing videos.
 
-## Executing code
+## Executing the code
 1. First, create the training dataset by running all code cells in `Making Dataset v2.ipynb`. Ensure the program is run for batches 1-9. This can be done by changing the batch number in the code cells in the notebook.
 
 2. Next, create the testing dataset by running all code cells in `Making test dataset.ipynb`.
