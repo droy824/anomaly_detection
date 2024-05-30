@@ -1,5 +1,7 @@
 # Introduction
-Anomalous human behaviour consists of any actions that deviate from the norm. This can include dangerous, aggressive or illegal behaviour. The aim for this project was to build a deep learning model that could identify when an anomaly is present in a given video input. The model focuses on identifying ten types of human behaviours: verbal arguments, road accidents, robbery, fighting, shootings, theft, vandalism, riots, stampedes, and normal behaviour. The model should be able to identify such behaviours in indoor or outdoor environments, and in day or night-time scenarios.
+Anomalous human behaviour consists of any actions that deviate from the norm. This can include dangerous, aggressive or illegal behaviour.
+
+The aim for this project was to build a deep learning model that could identify when an anomaly is present in a given video input. The model focuses on identifying ten types of human behaviours: verbal arguments, road accidents, robbery, fighting, shootings, theft, vandalism, riots, stampedes, and normal behaviour. The model should be able to identify such behaviours in indoor or outdoor environments, and in day or night-time scenarios.
 
 To accomplish this, this model uses the [UCF-Crime dataset](https://www.crcv.ucf.edu/projects/real-world/). It uses 271 out of the dataset's 1,900 videos, (as it requires frame-by-frame annotations for all training data).
 
