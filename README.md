@@ -1,9 +1,9 @@
 # Introduction
 Anomalous human behaviour consists of any actions that deviate from the norm. This can include dangerous, aggressive or illegal behaviour. The aim for this project was to build a deep learning model that could identify when an anomaly is present in a given video input. The model focuses on identifying ten types of human behaviours: verbal arguments, road accidents, robbery, fighting, shootings, theft, vandalism, riots, stampedes, and normal behaviour. The model should be able to identify such behaviours in indoor or outdoor environments, and in day or night-time scenarios.
 
-To accomplish this, I used the [UCF-Crime dataset](https://www.crcv.ucf.edu/projects/real-world/). I used 271 out of the dataset's 1,900 videos, (as I needed frame-by-frame annotations for all training data).
+To accomplish this, this model uses the [UCF-Crime dataset](https://www.crcv.ucf.edu/projects/real-world/). It uses 271 out of the dataset's 1,900 videos, (as it requires frame-by-frame annotations for all training data).
 
-I used Object Detection using [YOLOv3](https://pjreddie.com/media/files/papers/YOLOv3.pdf) and Object Tracking using [DeepSORT](https://arxiv.org/abs/1703.07402) to generate inputs describing the movements of objects in the scene, on which I trained an LSTM model.
+This model uses Object Detection using [YOLOv3](https://pjreddie.com/media/files/papers/YOLOv3.pdf) and Object Tracking using [DeepSORT](https://arxiv.org/abs/1703.07402) to generate inputs describing the movements of objects in the scene, on which the LSTM model was trained.
 
 # Results
 The trained LSTM model ([pre-trained weights](https://github.com/droy824/anomaly_detection/blob/main/model_5.pth)) produced an AUC of 62.5%. In comparison, W. Sultani et al.'s [proposed SoTA model](https://openaccess.thecvf.com/content_cvpr_2018/papers/Sultani_Real-World_Anomaly_Detection_CVPR_2018_paper.pdf) produces an AUC of 75.41%.
