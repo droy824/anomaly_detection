@@ -1,7 +1,7 @@
 # Introduction
 Anomalous human behaviour consists of any actions that deviate from the norm. This can include dangerous, aggressive or illegal behaviour.
 
-The aim for this project was to build a deep learning model that could identify when an anomaly is present in a given video input. The model focuses on identifying ten types of human behaviours: verbal arguments, road accidents, robbery, fighting, shootings, theft, vandalism, riots, stampedes, and normal behaviour. The model should be able to identify such behaviours in indoor or outdoor environments, and in day or night-time scenarios.
+The aim for this project was to build a deep learning model that could identify when an anomaly is present in a given video input. The model focuses on identifying ten types of human behaviours: abuse, arrest, assault, burglary, fighting, road accidents, shooting, shoplifting, vandalism, and normal behaviour. The model should be able to identify such behaviours in indoor or outdoor environments, and in day or night-time scenarios.
 
 To accomplish this, this model uses the [UCF-Crime dataset](https://www.crcv.ucf.edu/projects/real-world/). It uses 271 out of the dataset's 1,900 videos, (as it requires frame-by-frame annotations for all training data).
 
@@ -47,17 +47,13 @@ The following directories and files are present in `anomaly_detection`:
 
 9. `Anomaly Detection.ipynb`: Used to train the LSTM. It consists of custom datasets, custom DataLoaders, LSTM training loop and testing loop.
 
-10. `model_1.pth`: Pre-trained weights of the LSTM after training for 10 epochs.
+10. `model_1.pth` to `model_5.pth`: Pre-trained weights of the LSTM.
 
-11. `model_2.pth`: Pre-trained weights of the LSTM after training for 20 epochs.
+11. `Temporal_Anomaly_Annotation_for_Testing_Videos.txt`: File with temporal annotations for training and testing videos - tells us which frame contains which anomaly and in which video.
 
-12. `model_3.pth`: Pre-trained weights of the LSTM after training for 30 epochs.
+12. `Train`: Contains training videos.
 
-13. `Temporal_Anomaly_Annotation_for_Testing_Videos.txt`: File with temporal annotations for training and testing videos - tells us which frame contains which anomaly and in which video.
-
-14. `Train`: Contains training videos.
-
-15. `Test_dataset_2.zip`: Contains testing videos.
+13. `Test_dataset_2.zip`: Contains testing videos.
 
 ## Executing the code
 1. First, create the training dataset by running all code cells in `Making Dataset v2.ipynb`. Ensure the program is run for batches 1-9. This can be done by changing the batch number in the code cells in the notebook.
